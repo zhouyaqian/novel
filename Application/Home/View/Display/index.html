@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title> 作品展示</title>
+   <link rel="stylesheet" type="text/css" href="__STATIC__/css/work.css"/>
+   <link rel="stylesheet" type="text/css" href="__STATIC__/css/basic.css"/>
+   <link rel="stylesheet" type="text/css" href="__STATIC__/css/lunboqi.css"/>
+   <script type="text/JavaScript" src="__STATIC__/js/work.js"></script>
+ </head>
+ <body>
+     <div id="main">
+	    <div id="top">
+			       <img src="__PUBLIC__/Images/ab1.png"/>
+	    </div>
+		<div id="banner">
+			        <ul>
+					     <li><a href="{:U('Index/index')}">首页</a></li>
+						<li><a href="{:U('About/about')}">关于我们</a></li>
+						<li><a href="{:U('Display/index')}">作品展示</a></li>
+						<li><a href="{:U('News/index')}">新闻动态</a></li>
+						<li><a href="{:U('Contact/index')}">联系我们</a></li>
+					</ul>
+	    </div>
+	    <!--轮播图-->
+		<div id="container">
+			<div id="list" style="left: -1160px;">
+				<img src="__PUBLIC__/Images/3.jpg" alt="1"/>
+				<img src="__PUBLIC__/Images/1.jpg" alt="1"/>
+				<img src="__PUBLIC__/Images/2.jpg" alt="2"/>
+				<img src="__PUBLIC__/Images/3.jpg" alt="3"/>
+				<img src="__PUBLIC__/Images/1.jpg" alt="3"/>
+			</div>
+		<div id="buttons">
+			<span index="1" class="on"></span>
+			<span index="2"></span>
+			<span index="3"></span>
+		</div>
+			<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+			<a href="javascript:;" id="next" class="arrow">&gt;</a>
+		</div>
+		 <!--作品展示-->
+		<div id="works-show">   
+			<foreach name="list" item="v">
+				<dl>
+					<dt><a href="{:U('Display/comment',array('id'=>$v['id']))}"><img src="/{$v.sl_name}"></a></dt>
+					<dd class="title">{$v.name}</dd>
+					<dd class="other">评论：<span>{$v.comnum}</span></dd>
+					<dd class="other">推荐：<span>{$v.love}</span></dd>
+					<dd class="time">网页制作<span>{$v.time}</span></dd>
+				</dl>
+			</foreach>
+			{$page}	
+        </div>
+     </div>
+	    <div id="footer">
+	        <p class="copy">copyright reserved by xnnye</p>
+			<p>mobil:*********</p>
+			<p>address:凤天酒店旁</p>
+	    </div>
+ </body>
+ </html>

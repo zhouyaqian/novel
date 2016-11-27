@@ -1,0 +1,97 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: "微软雅黑";
+	list-style-type:none;
+	text-decoration: none;
+	font-size:12px;
+	}
+ body{
+	background:#a09f9f;
+}
+#main{
+	width: 1080px;
+	height: 810px;
+	margin: 0 auto;
+	background:url(../../../../../../../Public/Images/backgroung_02.jpg) no-repeat top;
+}
+#top{
+	width:340px;
+	height: 162px; 	
+}
+#leave{
+	width: 140px;
+	height: 195px;
+	margin-left: 400px;
+	box-shadow: -8px -5px 10px #666 ;
+	background:url(../../../../../../../Public/Images/qdban.jpg) no-repeat  top;
+}
+.leaveone{
+	width: 138px;
+	height: 193px;
+	border: 1px solid #090506;
+}
+.name {
+	font-size:18px;
+	color: #fff;
+	letter-spacing:2px;
+	margin-left:30px;
+}
+#leave form{
+	text-align: center;
+}
+#leave form:first-child{
+	margin-top: 50px;
+	color: #fff;
+	letter-spacing:4px;
+}
+#leave form:last-child{ 
+	margin-top: 10px;
+	color: #fff;
+	letter-spacing:4px;
+}
+
+.buttons{
+	font-size: 20px;
+	width: 80px;
+	height: 30px;
+	border: none;
+	color: #fff;
+	background: #231f20;
+	cursor:pointer; 
+}
+
+#time{
+	width: 870px;
+	height: 325px;
+	box-shadow:-12px -8px 10px #666;
+	margin:30px 0 0 90px;
+	background:url(../../../../../../../Public/Images/sjban.jpg) no-repeat top ;
+}
+#time .week{
+	width: 200px;
+	height:225px;
+	float: left;
+	margin-top: 50px;
+	margin-left: 220px;
+}
+#time .week dd{
+	color: #fff;
+	font-size: 24px;
+}
+#time .week dd span{
+	color: #fff;
+	font-size: 24px;
+	margin-left: 45px;
+}
+.amount{
+	width: 140px;
+	height: 100px;
+	float: left;
+	margin: 80px 0 0 150px;
+}
+.amount dd{
+	color: #fff;
+	margin-top: 10px;
+	font-size: 24px;
+}

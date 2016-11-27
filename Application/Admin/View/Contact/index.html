@@ -1,0 +1,42 @@
+<include file="Public/header" title="联系我们" />
+
+<div id="page-wrapper">
+    
+    <div class="row">
+        <div class="col-md-6">
+            <form action="{:U('contact/index')}" method="post">
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" name="key" placeholder="输入姓名或者联系方式关键词搜索">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>联系方式</th>
+				<th>意见</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        <foreach name="model" item="v">
+            <tr>
+                <td>{$v.id}</td>
+                <td>{$v.name}</td>
+                <td>{$v.phone}</td>
+                <td>{$v.content}</td>
+                <td><a href="{:U('contact/update?id=')}{$v.id}">查看</a> | <a href="{:U('contact/delete?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    {$page}
+</div>
+
+<include file="Public/footer" />

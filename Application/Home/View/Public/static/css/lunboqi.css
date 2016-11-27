@@ -1,0 +1,70 @@
+*{
+ margin: 0;
+  padding: 0; 
+  text-decoration: none;
+  list-style-type: none;
+}
+#container {
+	width: 1160px;
+	height: 325px;
+	border: 3px solid #333;
+	overflow: hidden;
+	position: relative;
+	margin: 10px auto ;
+}
+#list { 
+	width: 5800px;
+	height: 325px;
+	position: absolute; 
+	z-index: 1;
+}
+ #list img {
+    float: left;
+}
+ #buttons { 
+ 	position: absolute; 
+ 	height: 10px;
+ 	width: 100px;
+ 	z-index: 2; 
+ 	bottom: 20px;
+  	left: 550px;
+}
+#buttons span { 
+  	cursor: pointer;
+    float: left; 
+    border: 1px solid #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #333;
+    margin-right: 5px;
+}
+#buttons .on {
+  	background: orangered;
+}
+.arrow{
+	width: 40px;
+	 height: 40px;
+	cursor: pointer;
+	display: none; 
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold; 
+	line-height: 32px;
+	position: absolute;
+	top: 140px;
+	z-index: 2;
+	background-color: RGBA(0,0,0,.3);
+	color: #fff;
+}
+.arrow:hover { 
+	background-color: RGBA(0,0,0,.7);
+}
+#container:hover .arrow {
+ 	display: block;
+}
+
+
+
+#prev { left: 20px;}
+#next { right: 20px;}

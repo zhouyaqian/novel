@@ -1,0 +1,132 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: "微软雅黑";
+	list-style-type:none;
+	text-decoration: none;
+	font-size:12px;
+	}
+ body{
+  	width: 100%;
+	background:#d1d1d1;
+}
+/*主内容*/
+#main{
+	width: 1160px;
+	margin: 0 auto;
+}
+/*头部logo*/
+#top{
+	width: 100%;
+	height: 80px;
+	display:block;
+    margin-top:8px;
+}
+/*导航菜单*/
+#nav{
+	width: 100%;
+	height:40px;
+	border-radius: 5px;
+	background: #a3a3a4;
+}
+#nav ul{
+	height:40px;
+}
+#nav ul li{
+	display:inline;
+	text-align:center;
+	border-radius: 5px;
+}
+#nav ul li a{
+	display:block;
+	float:left;
+	border-radius: 5px;
+	width:80px;
+	height:40px;
+    color:white;
+    line-height: 40px;
+} 
+#nav ul li a:hover{
+	background:#515354;
+	border-radius: 8px;
+}
+/*反馈内容*/
+#container{
+	width: 100%;
+	height: 566px;
+}
+#container-left{
+	width: 400px;
+	float: left;
+	padding: 32px 0 0 20px;
+}
+#container-right{
+	width: 540px;
+	float: right;
+}
+#container-right form ul li{
+	height: 54px;
+}
+#name,#phone{
+	width:522px;
+	height:30px;
+	margin-top: 15px;
+	border-radius: 5px;
+	border:1px solid #dfecb3;
+	line-height: 20px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	padding-left:8px; 
+}
+.message{
+	line-height: 20px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #ACACAC;
+	padding-left:8px; 
+}
+#container-right ul li label input:focus{
+	border: 1px solid #62AEEC;
+	box-shadow: 0 0 5px #62aeec; }
+/*文本输入框*/
+.text{
+	width: 522px;
+	height: 275px;
+	margin-top: 15px;
+	border-radius: 5px;
+	padding:4px 0 0 8px; 
+	border:1px solid #afafaf;
+	overflow: hidden;
+	resize: none; 
+	line-height: 20px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+.land{
+	margin-top: 15px;
+	width:530px;
+	height:24px;
+	border-radius: 5px;
+	text-align:center;
+	font-weight:bold;
+	cursor:pointer;
+	border:1px solid #515354;
+	background: #515354;
+}
+#footer{
+	width: 100%;
+	height:120px;
+	background: #757576;
+	padding-top: 20px;
+}
+#footer p{
+	text-align:center;
+	color:#fff;	
+}
+#footer p.copy{
+	height:40px;
+	line-height:50px;
+}
+p.phone,p.address{
+	height:21px;
+}

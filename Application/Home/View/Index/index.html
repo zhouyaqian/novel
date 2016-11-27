@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"content="text/html;charset=utf-8">
+<title>首页</title>
+<link rel="stylesheet"type="text/css"href="__STATIC__/css/home-page.css"/>
+<script type="text/javascript">
+window.onload=function(){
+  var area=document.getElementById('moocBox');
+  var liheight=34;
+  //var con1=document.getElementById('con1');
+  //var con2=document.getElementById('con2');
+  area.innerHTML+=area.innerHTML;
+  var time;
+  //area.innerHTML+=area.innerHTML;
+  area.scrollTop=0;
+  
+  function startMove(){
+    area.scrollTop++;
+    time=setInterval(scrollUp,50);
+  }
+  function scrollUp(){
+    if(area.scrollTop%liheight==0){
+      clearInterval(time);
+      setTimeout(startMove,1000);
+    }
+    else{
+      area.scrollTop++;
+      if(area.scrollTop>=area.scrollHeight/2){
+        area.scrollTop=0;
+      }
+    }
+  }
+  window.setTimeout(startMove,1000);
+}
+</script>
+</head>
+<body>
+  <!--用于所有内容居中的大框架-->
+  <div class="all">
+		<div class="loge">
+  			<img src="__PUBLIC__/Images/loge-home.jpg"/>
+        <if condition="session('userid') neq 0">
+			<a href="{:U('Time/index')}" class="bar">前往签到</a>
+			<else />
+				<a href="{:U('User/login')}" class="bar">登录签到</a>
+		</if>
+  	</div>
+  	<!--导航条-->
+    <ul class="nav">
+  		<li><a href="{:U('Index/index')}">首页</a></li>
+		<li><a href="{:U('About/about')}">关于我们</a></li>
+		<li><a href="{:U('Display/index')}">作品展示</a></li>
+		<li><a href="{:U('News/index')}">新闻动态</a></li>
+		<li><a href="{:U('Contact/index')}">联系我们</a></li>
+  	</ul>
+  	<div class="nav-bottom">
+  		<img src="__PUBLIC__/Images/nav-bottom.jpg"/>
+  	</div>
+    <div class="trends">
+      <p class="new-tre">最新动态:</p>
+      <!--<marquee direction="up" loop="-1" scrollamont="50" scrolldelay="2000">-->
+      <ul id="moocBox">
+        <li><a href="{:U('News/index')}">终于只让一个人关怀</a></li>
+        <li><a href="{:U('News/index')}">关起门来 还有什么意外</a></li>
+        <li><a href="{:U('News/index')}">好像一辈子 一切都已安排</a></li>
+        <li><a href="{:U('News/index')}">这完美生活 美好得好应该</a></li>
+        <li><a href="{:U('News/index')}">终于成为他终身最爱</a></li>
+        <li><a href="{:U('News/index')}">被围绕也同样被依赖</a></li>
+      </ul>
+    </div>
+    <div class="works">作品展示<a href="{:U('Display/index')}">更多</a></div>
+    <!--背景为白色里面的内容-->
+    <div class="message">
+		<foreach name="list" item="v">
+      <div class="work-ave">
+          <dl>
+			<a href="{:U('Display/comment',array('id'=>$v['id']))}"><img class="work-ave-com" src="/{$v.sl_name}"/></a></dt> 
+            <dt class="work-ave-title">{$v.name}</dt>
+            <dd>评论：<span class="work-ave-done">{$v.comnum}</span></dd>
+            <dd class="work-ave-oth">推荐：<span class="work-ave-done">{$v.love}</span></dd>
+            <dd>网页制作<span class="work-ave-time">{$v.time}</span></dd>
+          </dl>
+		
+      </div>
+	  </foreach>
+
+    </div>
+  </div>
+  <!--底部页脚-->
+<include file="Public/footer" />

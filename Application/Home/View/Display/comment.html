@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title> 作品展示（详细） </title>
+   <link rel="stylesheet" type="text/css" href="__STATIC__/css/work-detailed.css"/>
+   <link rel="stylesheet" type="text/css" href="__STATIC__/css/basic.css"/>
+  <!--<script src="__STATIC__/js/work-detailed.js"></script>   -->  
+   <script src="__STATIC__/js/jquery.js"></script>
+   <script src="__STATIC__/js/work-detailed.js"></script> 
+   <script src="__STATIC__/js/cookie.js"></script>
+   <script src="__STATIC__/js/comment.js"></script>
+ </head>
+ <body>
+     <div id="main">
+	    <div id="top">
+			<img src="__PUBLIC__/Images/ab1.png"/>
+	    </div>
+		<div id="banner">
+			        <ul>
+					    <li><a href="{:U('Index/index')}">首页</a></li>
+						<li><a href="{:U('About/about')}">关于我们</a></li>
+						<li><a href="{:U('Display/index')}">作品展示</a></li>
+						<li><a href="{:U('News/index')}">新闻动态</a></li>
+						<li><a href="{:U('Contact/index')}">联系我们</a></li>
+					<ul>
+	    </div>
+		<div id="shows">
+			<h1>对作品的介绍</h1>
+				<div class="first-works"><!--作品图片展示-->  
+					<h2>{$display.introdaction}</h2>
+					{$display.pic_name}
+				</div>
+			<span _id="{$id}" link="__URL__/putLove"  id="button-love"><img src="__PUBLIC__/Images/wo2.png"/></span>
+			<p id="love" >{$display.love}</p>
+		</div>
+		<div id="comment">
+			<h1>评论</h1>
+            <div id="table"><!--留言板-->
+				<form>
+					<textarea name="content" id="comment_text">
+					</textarea>
+					<input type="button" _id="{$id}" url="__URL__/addcomment" value="发表评论" class="views"/>
+				</form>
+            </div>
+			<div id="Dl" style="overflow:hidden;">
+				<input type="hidden" id="com" />
+				<foreach name="comment" item="v">
+					<dl class="dl-list">
+						<dt><img src="__PUBLIC__/Images/wo3.png"/></dt>
+						<dd class="words-color">{$v.time|date='Y-m-d H:i:s',###}</dd>
+						<p>{$v.content}</p>
+					
+						<ul class="respond">     <!--回复-->
+							<li class="submit">回复</li>
+							<img src="__PUBLIC__/Images/wo5.png"/>
+							<li _id="{$v.id}" link="__URL__/getLove" class="a-love">赞同(<span>{$v.love}</span>)</li>
+						</ul>
+						<form><!--评论 id-->
+							<div _id="{$v.id}" class="wrap-list" url="__URL__/commentre"></div>
+						</form>
+						<div class="commentre">
+							<foreach name="v" item="vo">
+								<if condition="$vo[$k] eq '' ">
+								<dd class="time_re">{$vo.time_re|date='Y-m-d H:i:s',###}</dd>
+								<dd class="content_re">{$vo.content_re}</dd>
+								</if>
+							</foreach>
+						</div>
+					</dl>
+				</foreach>
+			</div>
+		</div>
+		<div class="page">{$page}</div>
+     </div>
+	 <div id="footer">
+	        <p class="copy">copyright reserved by xnnye</p>
+			<p>mobil:*********</p>
+			<p>address:凤天酒店旁</p>
+	</div>
+ </body>
+ </html>

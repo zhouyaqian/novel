@@ -1,0 +1,77 @@
+#pictchange{
+	height:385px;
+}
+/*作品展示*/
+#works-show{
+	height:1114px;
+	width:1166px;
+}
+#works-show img{
+	height:195px;
+	width:278px;
+	margin:0 0 0 6px;
+}
+#works-show dl{
+	height:329px;
+	width:291px;
+	float:left;
+	background:#fff;
+}
+#works-show dt{
+	width:280px;
+	padding:5px 0 5px 0;
+}
+#works-show dd{
+	font-weight:bold;
+}
+.title{
+	height:33px;
+	text-align:center;
+	line-height:33px;
+	color: #1c7713;
+	font-size:15px;
+}
+.other{
+    height:33px;
+    text-indent:22px;
+    color:#878787;
+}
+.other span{
+	color:#70e26a;
+}
+.time{
+
+	color:#878787;
+	text-indent:22px;
+}
+.time span{
+	color:#878787;
+    padding-left:124px;
+}
+/*分页*/
+#works-show  ul{
+	clear:both;
+	height:40px;
+	width:230px;
+	margin:0 auto;
+	padding-top: 27px;
+}
+#works-show ul li{
+	float:left;
+}
+#works-show li a,#works-show li span{
+	display:block;
+	width:38px;
+	height:40px;
+	margin-right: 5px;
+	font-size:15px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 35px;
+	color:#d1d1d1;
+	background:#fff;
+	cursor:pointer;
+}
+#works-show li span{
+	color:black;
+}

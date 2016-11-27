@@ -1,0 +1,73 @@
+
+#introduction{
+	height:400px;
+	background:white;
+	margin-bottom:30px;
+    box-shadow:0px 5px 8px 0px #999999;
+}
+.logo{    /*logo图标*/
+	display:block;
+	float:left;
+	padding:32px 20px 35px 125px;
+}
+#introduction h1,#service h1,#target h1{
+	float:left;
+	color:#29b121;
+	font-size:20px;
+	text-shadow:1px 0 0 #c2e7ab;                  /*文字阴影*/
+}
+#introduction h1{
+	height:112px;
+	width:668px;
+	line-height:112px;
+ }
+.round{                                                           /*圆角图片*/
+	 display:block;
+	 float:right;
+	 padding:0 0 0 9px;
+ }
+ #introduction p{
+ 	height:65px;
+ }
+#introduction p,#service p,#target p{
+	float:left;
+	width:1056px;
+	margin-left:20px;
+	text-indent:35px;
+	font-weight:bold;
+	color:#4b4b4b;
+	line-height:20px;
+}
+
+#service{
+    height:285px;
+    background:white;
+	margin-bottom:30px;
+	box-shadow:0px 8px 5px 0px #999999;
+}
+#service h1{
+	height:45px;
+	width:850px;
+	padding:50px 0 0 118px;
+}
+#service ul{
+	float:left;
+	height:95px;
+	margin-left:75px;
+}
+#service ul li{
+	line-height:21px;
+	font-weight:bold;
+	color:#4b4b4b;
+}
+#target{
+	height:488px;
+    background:white;
+	margin-bottom:179px;
+	box-shadow:0px 8px 5px 0px #999999;
+}
+#target h1{
+	height:45px;
+	width:731px;
+	padding:50px 0 0 118px;
+}

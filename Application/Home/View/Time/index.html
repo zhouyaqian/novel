@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  href="__STATIC__/css/time.css">
+    <title>签到离开</title>
+	<script src="__STATIC__/js/jquery-1.12.2.min.js"></script>
+	<script>
+		$(function(){
+			$('#begin').click(function(){
+				$('#begin').blur();
+				$.post('__URL__/begin',{id:'begin'},function(data){
+					alert(data);
+					location.href = '__URL__/index';
+					
+				});
+				return false;
+			});
+			
+			$('#end').click(function(){
+				$('#end').blur();
+				$.post('__URL__/leave',{id:'end'},function(data){
+					alert(data);
+					location.href = '__URL__/index';
+				});
+				return false;
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div id="main">
+
+		<div id="top">
+			    <img src="__PUBLIC__/Images/logo_02.png"/>
+		</div>
+		<div id="leave">
+			
+			<div class="leaveone">
+			
+				<form  method="post">
+					<lable><button class="buttons" id="begin">签到</button></lable>
+				</form>
+				<form  method="post">
+				
+					<lable><button class="buttons" id="end">离开</button></lable><br>
+					<a class="buttons" href="{:U('Index/index')}">首页</a>
+				</form>
+				
+				
+			</div>
+		</div>
+
+
+
+		<div id="time">
+			<dl class="week">
+				<dd class="weekone">星期一<span>{$time.monday}</span></dd>
+				<dd>星期二<span>{$time.tuesday}</span></dd>
+				<dd>星期三<span>{$time.wednesday}</span></dd>
+				<dd>星期四<span>{$time.thursday}</span></dd>
+				<dd>星期五<span>{$time.friday}</span></dd>
+				<dd>星期六<span>{$time.saturday}</span></dd>
+				<dd>星期天<span>{$time.sunday}</span></dd>
+			</dl>
+			<dl class="amount">
+				<dd>{:session('username')}</dd>
+				<dd>本周共计</dd>
+				<dd>{$time.total}</dd>
+			</dl>
+        </div>
+
+
+
+	</div>
+	
+</body>
+</html>

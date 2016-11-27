@@ -1,0 +1,51 @@
+<include file="Public/header" title="用户管理" />
+<include file="User/css/user"/>
+
+    <load href='__STATIC__/js/delete.js' />
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-md-6">
+            <a href="{:U('user/add')}" class="btn btn-success">添加用户</a>
+        </div>
+
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <td>编号</td>
+                    <td>用户名</td>
+                    <td>邮箱</td>
+                    <td>类型</td>
+                    <td>状态</td>
+                    <td>操作</td>
+                </tr>
+            </thead>
+        <tbody>
+    <foreach name="data" item="vo">
+        <tr>
+            <td>{$vo.id}</td>
+            <td>{$vo.username}</td>
+            <td>{$vo.email}</td>
+            <td>
+
+                <if condition="$vo.type eq 0"> <span class="vip">会员</span>
+                    <elseif condition="$vo.type eq 1"/><span class="mannage">管理员</span>
+                </if>
+            </td>
+            <td></td>
+            <td><a href="{:U('user/revise?id=')}{$vo.id}">编辑</a> |<a href="__URL__/deleAttr/id/{$vo.id}"><span  id="delete" onclick=" return de()">删除</span></a></td>
+        </tr>
+        </foreach>
+    <tr>
+        <td colspan='5' align='center'>
+
+            {$page}
+
+        </td>
+    </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<include file="Public/footer" />

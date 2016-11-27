@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  href="__STATIC__/css/contact us.css">
+    <script type="text/JavaScript" src="__STATIC__/js/conctact us.js"></script>
+	<script src="__STATIC__/js/jquery-1.12.2.min.js"></script>
+    <title>联系我们</title>
+</head>
+<body>
+<div id="main">
+	        <div id="top">
+			      <a href="#"> <img src="__PUBLIC__/Images/logo_03.png"/></a>
+			</div>
+			<div id="nav">
+			        <ul>
+					     <li><a href="{:U('Index/index')}">首页</a></li>
+						<li><a href="{:U('About/about')}">关于我们</a></li>
+						<li><a href="{:U('Display/index')}">作品展示</a></li>
+						<li><a href="{:U('News/index')}">新闻动态</a></li>
+						<li><a href="{:U('Contact/index')}">联系我们</a></li>
+					<ul>
+			</div>
+			<div id="container">
+				<div id="container-left">
+					<p>感谢您对新叶网络工作室的支持，我们的网站还在不断的优化更新中。如果您有什么好的建议或意见，希望您能给我吗留言。期待您的继续关注。</p>
+				</div>
+				<div id="container-right">
+					<form action="__URL__/contact" method="post">
+						<ul>
+						<li>
+							<label id="name_info">        <!-- 姓名 -->
+						  <input id="name" class="name" type="text" name="name"  value="" placeholder="姓名"/>  
+						  <p id="umessage" class="message"></p>
+						   </label>
+							</li>
+							<li>
+						 <label id="phone_box">         <!-- 手机号码  -->
+						  <input id="phone" class="phone" type="text" name="phone"  value="" placeholder="联系方式"/>
+						  <p id="umessage" class="message"></p>
+						</label>
+						</li>
+						</ul>
+					<!-- 意见 -->
+						  <textarea name="content" class="text" style="height=275px;" placeholder="意见、建议或需要我们帮助的问题"/></textarea>
+						<button id="submit" class="land" _url="__URL__/contatc">确认提交</button>
+					</form>
+				</div>
+			</div>
+</div>
+<div id="footer">
+	<p class="copy">copyright reserved by xnnye</p>
+			<p class="phone">mobil:*********</p>
+			<p class="address">address:凤天酒店旁</p>
+</div>
+</body>
+</html>

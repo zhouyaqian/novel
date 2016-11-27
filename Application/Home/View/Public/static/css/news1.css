@@ -1,0 +1,100 @@
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	list-style-type:none;
+	/*font-family: "微软圆体";*/
+	}
+body{
+  	background:#d1d1d1;
+  	}
+a{
+  	text-decoration:none;
+  	}
+img{
+  	border:none;
+  	}
+/*居中的大框架*/
+.all{
+	width:1160px;
+	margin:0 auto;
+}
+#loge{
+	margin:18px 0 10px 0;
+}
+/*导航条*/
+.nav{
+	width:100%;
+	overflow: hidden;
+	background:#a3a3a4;
+}
+.nav li{
+	list-style-type:none;
+	float:left;
+}
+.nav li a{
+	color:#fff;
+	float:left;
+	line-height: 42px;
+	width: 81px;
+	text-align: center;
+}
+.nav li a:hover{
+	background: #515354;
+}
+
+
+.message{
+	overflow: hidden;
+	background: #fff;
+	width: 100%;
+}
+.case{
+	overflow: hidden;
+	width: 1021px;
+	background: #ededed;
+	margin: 0 auto;
+}
+.case h1{
+	text-align: center;
+	font-size: 25px;
+	font-family: '宋体';
+	line-height: 73px;
+}
+/*轮播图*/
+#detail{
+	width: 740px;
+	height: 380px;
+	background: #070707;
+	margin: 0 auto;
+}
+
+.case-mess{
+	width: 876px;
+	margin:0 auto;
+	padding: 0 0 100px 0;
+}
+.case-mess p{
+	letter-spacing: 1px;
+	line-height: 22px;
+	margin: 26px 0 10px 0;
+	text-indent: 2em;
+	color: #101010;
+}
+
+
+
+
+
+.footer{
+	height: 106px;
+	background: #757576;
+	padding: 40px 0 0 0;
+}
+
+.footer p{
+	text-align: center;
+	color: #fff;
+	line-height: 20px;
+}
+

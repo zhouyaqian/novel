@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"content="text/html;charset=utf-8">
+<title>新闻动态</title>
+
+<link rel="stylesheet"type="text/css"href="__STATIC__/css/news.css"/>
+
+
+</head>
+<body>
+	<!--用于所有内容居中的大框架-->
+	<div class="all">
+		<div id="loge">
+  			<img src="__PUBLIC__/Images/loge.jpg"/>
+  		</div>
+		
+  		<!--导航条-->
+  		<ul class="nav">
+  			<li><a href="{:U('Index/index')}">首页</a></li>
+  			<li><a href="{:U('About/about')}">关于我们</a></li>
+  			<li><a href="{:U('Display/index')}">作品展示</a></li>
+  			<li><a href="{:U('News/index')}">新闻动态</a></li>
+  			<li><a href="{:U('Contact/index')}">联系我们</a></li>
+  		</ul>
+  		<div class="nav-bottom">
+  			<img src="__PUBLIC__/Images/nav-bottom.jpg"/>
+  		</div>
+		
+  		<!--背景为白色里面的内容-->
+  		<div class="message">
+		
+		<foreach name='list' item='vo'>
+		
+		<if condition="$vo.id !='' ">   
+		<div class="common commom-other">
+			<img src="{$vo['picname']}" />
+  				<div class="com-right">
+					<h1 class="title">{$vo.title}</h1>
+  					<div class="content">{$vo.content|htmlspecialchars_decode}</div>
+					<div class="time">{$vo.time|date='Y/m/d',###}</div>
+					<div class="clea"></div>
+					<div><a href="{:U('News/more',array('id'=>$vo['id']))}" class="more">更多</a></div>
+				</div>
+  		</div>
+		<else />
+		</if>
+  		</foreach>
+		</div>		
+  		
+		<!--翻页123-->
+  		<div class="turn">
+		{$page}
+		</div>	
+		
+	</div>	
+		
+	<!--底部页脚-->
+  	<div class="footer">
+  		<p>copyright reserved by xnnye</p>
+  		<p>********</p>
+  		<p>address:凤天酒店旁</p>
+  	</div>
+</body>
+</html>			
+  			
+  		
+  	
+  	
+						
+					
+					
+					
+					
+					
+					
+					
+					
+						
+					
+					
+  			
+			
+  		
+  		

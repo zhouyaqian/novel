@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"  href="__STATIC__/css/login.css">
+   
+    <title>用户登录</title>
+  </head>
+<body>
+<div id="main">
+  <div id="main-left">
+    <dl>
+      <dd class="logo"><img src="__PUBLIC__/Images/biglogo_02.png"></dd>
+    </dl>
+     <dl>
+      <dd class="worker"><img src="__PUBLIC__/Images/work_03.png"></dd>
+    </dl>
+  </div><!--main-left -->
+<div id="main-right">
+	<h2>登录签到</h2>
+	<div id="form">
+	<form action="__URL__/login" method="post">
+    <ul>
+      <li>
+    <label id="name_info">
+          <input  id="username" class="username" type="text" name="name" placeholder="帐号"/></br>
+        <span id="umessage" class="message"></span>
+      </input>
+     </label>
+      </li>
+		<li>
+        <label id="password_info">
+          <input id="password" type="password" name="phone"placeholder="密码" /></br>
+        <span id="umessage" class="message"></span>
+		<span style="display:<if condition='$flag eq 0'>none<else />block</if>;color:red">用户名或密码错误</span>
+		<span style="display:<if condition='$mail eq 0'>none<else />block</if>;color:red">您的邮箱没有激活</span>
+      </input>
+           </label>
+      </li>
+		 </ul>
+		 
+		<button id="submit">确认提交</button>
+		
+	</form>
+  </div>
+</div><!--main-right -->
+<div id="footer">
+  
+</div><!--footer -->
+</div> <!--main -->
+</body>
+    <script type="text/JavaScript" src="__STATIC__/js/basebase.js"></script>
+    <script type="text/JavaScript" src="__STATIC__/js/addaddEvent.js"></script>
+
+</html>
+ 

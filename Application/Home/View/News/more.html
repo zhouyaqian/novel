@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"content="text/html;charset=utf-8">
+<title>新闻详细</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/news1.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/lunbo.css"/>
+<script type="text/JavaScript" src="__STATIC__/js/new.js"></script>
+</head>
+<body>
+	<!--用于所有内容居中的大框架-->
+	<div class="all">
+		<div id="loge">
+  			<img src="__PUBLIC__/Images/loge.jpg"/>
+  		</div>
+  		<!--导航条-->
+  		<ul class="nav">
+  			<li><a href="{:U('Index/index')}">首页</a></li>
+  			<li><a href="{:U('About/about')}">关于我们</a></li>
+  			<li><a href="{:U('Display/index')}">作品展示</a></li>
+  			<li><a href="{:U('News/index')}">新闻动态</a></li>
+  			<li><a href="{:U('Contact/index')}">联系我们</a></li>
+  		</ul>
+  		
+  		<!--背景为白色里面的内容-->
+  		<div class="message">
+			<div class="case">
+				<h1>{$more.title}</h1>
+          <!--轮播图-->
+				<div id="detail">
+					<div id="list" style="left: -740px;">
+					<img src="{$more.4}" alt="1"/>
+					<img src="{$more.0}" alt="1"/>
+					<img src="{$more.1}" alt="1"/>
+					<img src="{$more.2}" alt="1"/>
+					<img src="{$more.3}" alt="1"/>
+					<img src="{$more.4}" alt="1"/>
+					<img src="{$more.0}" alt="1"/>
+					
+					</div>
+					<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+					<a href="javascript:;" id="next" class="arrow">&gt;</a>
+				</div>
+				<div class="case-mess">
+				<p>{$more.content|htmlspecialchars_decode}</p>
+				</div>
+          </div>
+  		</div>
+  	</div>
+  	<!--底部页脚-->
+  	<div class="footer">
+  		<p>copyright reserved by xnnye</p>
+  		<p>********</p>
+  		<p>address:凤天酒店旁</p>
+  	</div>
+</body>
+</html>
+
+

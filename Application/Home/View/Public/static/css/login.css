@@ -1,0 +1,101 @@
+*{
+        margin: 0;
+        padding: 0;
+        font-family: "微软雅黑";
+        color: #000;
+        font-size: 12px;
+        list-style-type: none;
+}
+body{
+	width: 100%;
+	background: #d1d1d1;
+}
+/*main*/
+#main{
+	width: 1000px;
+	height: 495px;
+	margin: 0 auto;
+}
+#main-left{
+	margin-top: 9.3%;
+	float: left;
+}
+#main-left dl dd{
+	height: 226px;
+}
+#main-left dl .worker{
+	margin-left: 50.5px;
+}
+/*登录签到*/
+#main-right{
+	width:370px;
+	height: 185px;
+	margin-top: 135px;
+	margin-right: 93px;
+	background: #fff; 
+	float: right;
+}
+#main-right h2{
+	margin: 9px 0 0 36px;
+	font-size: 14px;
+}
+#submit{
+   	width: 180px;
+       background-color: #95e163;
+       font-size: 13px;
+       height: 24px;
+       line-height: 22px;
+       text-align: center;
+       color: white;
+       border:1px solid #d7e7a0;
+       border-radius: 5px;
+       cursor: pointer;
+}
+#form ul li label{
+	height: 50px;
+}
+#form ul li label input {
+	width: 180px;
+    height: 24px;
+	color: #333;
+	border:1px solid #d7e7a0;
+	border-radius: 5px;
+	outline: none;
+}
+#form ul li label input:focus{
+	border: 1px solid #62AEEC;
+	box-shadow: 0 0 5px #62aeec; }
+#form{
+	margin: 22px 0 0 60px;
+}
+#form ul li{
+	height: 40px;
+	margin-bottom: 5px;
+}
+.message{
+	height: 20px;
+	line-height: 20px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #ACACAC;
+}/*
+.project a{
+	font-size: 13px;
+	color: #39733c;
+	margin-left: 7px;
+	text-decoration: none;	
+}
+.project{
+	width: 70px;
+	display:inline-block;
+	text-align: right;
+	float: left;
+}
+*/
+#footer{
+	width: 100%;
+	height: 20px;
+	clear: both;
+	background: #636363;
+}
+

@@ -1,0 +1,161 @@
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	list-style-type:none;
+	/*font-family: "微软圆体";*/
+	}
+body{
+  	background:#d1d1d1;
+  	}
+a{
+  	text-decoration:none;
+  	}
+img{
+  	border:none;
+  	}
+/*居中的大框架*/
+.all{
+	width:1160px;
+	margin:0 auto;
+}
+#loge{
+	margin:20px 0 0 0;
+}
+/*导航条*/
+.nav{
+	width:100%;
+	overflow: hidden;
+	background:#a3a3a4;
+}
+.nav li{
+	list-style-type:none;
+	float:left;
+}
+.nav li a{
+	color:#fff;
+	float:left;
+	line-height:41px;
+	width:82px;
+	text-align:center;
+}
+.nav li a:hover{
+	background: #515354;
+}
+.nav-bottom{
+	margin:0 0 28px 0;
+}
+
+
+.message{
+	overflow: hidden;
+	background: #fff;
+	width: 100%;
+	height:523px;
+}
+.common{
+	width: 1000px;
+	
+	overflow: hidden;
+	margin: 0 auto;
+}
+.commom-other{
+	border-bottom:1px solid #008a00;
+}
+.commom-other:last-child{
+	border:none;
+}
+.common img{
+	
+	display:block;
+	float: left;
+	width:140px;
+	height:80px;
+	
+	margin:20px 42px 10px 0;
+}
+
+
+.com-right{
+	width:810px;
+	height:130px;
+	float: left;
+}
+
+
+.title{
+	color: #1c7713;
+	width: 810px;
+	text-align: center;
+	line-height: 22px;
+	padding: 6px 0 0 0;
+}
+.content{
+	font-weight: bold;
+	font-size: 10px;
+	text-indent: 2em;
+	width: 810px;
+	line-height: 20px;
+	height:50px;
+	overflow:hidden;
+	
+}
+.time{
+	color: #6d6d6d;
+	float: right;
+	margin:4px 0 4px 0;
+}
+.clea{
+	width:0;
+	height:0;
+	clear:both;
+}
+.more{
+	display: block;
+	float: right;
+	color: #fff;
+	background: #95e163;
+	padding: 3px 13px 4px 12px;
+	margin:4px 0 0 0;
+	font-weight:bold;
+}
+
+/*翻页123*/
+.turn ul{
+	width: 210px;
+	height: 44px;
+	padding: 20px 0 0 0;
+	margin: 0 auto;
+	
+}
+.turn ul li{
+	width:28px;
+	line-height:28px;
+	background:#fff;
+	color:#d3d6cb;
+	text-align:center;
+	display:block;
+	float:left;
+	margin:0 4px 0 0;
+}
+.turn li a,.turn li span{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+.turn li span{
+	color:black;
+}
+.footer{
+	height: 106px;
+	background: #757576;
+	padding: 40px 0 0 0;
+}
+
+.footer p{
+	text-align: center;
+	color: #fff;
+	line-height: 20px;
+}
+
